@@ -1,3 +1,16 @@
+# Search engines and AI assistants are welcome.
 User-agent: *
 Allow: /
+
+# AI crawlers, listed explicitly
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://abdelmoulabilel.github.io/SPA-website/sitemap.xml

@@ -11,6 +11,7 @@ A conversion-focused website for a spa and beauty salon in Oran: treatments with
 - **Built to convert:** one clear call to action per section, a sticky mobile bar (WhatsApp + book), a short booking form with inline validation, reviews, a limited offer, and an FAQ that answers objections before they stop a booking.
 - **AI assistant:** a chat widget that answers visitors' questions 24/7 from the business facts in [`assistant.json`](assistant.json) and steers them toward booking. It runs on Claude through a small Cloudflare Worker ([site-assistant](https://github.com/AbdelmoulaBilel/site-assistant)); with no server configured it falls back to instant FAQ answers.
 - **Lighthouse:** Performance 97 mobile / 100 desktop, Accessibility 100, Best Practices 100, SEO 100. No layout shift.
+- **AI-search ready:** [`llms.txt`](llms.txt) summary for AI assistants, schema.org data (business, hours, prices, FAQ, author), and AI crawlers explicitly allowed in `robots.txt`, so ChatGPT, Claude or Perplexity can answer questions about the site correctly.
 - **Fast:** plain HTML, CSS and JavaScript with no framework, Bootstrap or jQuery. Self-hosted fonts, responsive WebP images with lazy loading; first load is 306 KB on mobile.
 - **Responsive and accessible:** mobile-first layout, keyboard navigation, visible focus states, reduced-motion support, semantic HTML and schema.org data for search engines.
 - **Language:** French (Algerian market, prices in DA).

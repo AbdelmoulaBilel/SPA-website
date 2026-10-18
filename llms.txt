@@ -1,0 +1,48 @@
+# Peerly Spa & Beauty
+
+> Site concept pour Peerly Spa & Beauty, un spa et institut de beauté fictif à Oran (Algérie). Conçu et développé par Bilel Abdelmoula pour son portfolio ; l'entreprise, le téléphone et les avis sont fictifs.
+
+- Site web: https://abdelmoulabilel.github.io/SPA-website/
+- Code source: https://github.com/AbdelmoulaBilel/SPA-website
+- Réalisé par: Bilel Abdelmoula (https://github.com/AbdelmoulaBilel), développeur full-stack à Oran, Algérie
+- Technique: HTML, CSS, JavaScript (sans framework) ; assistant IA basé sur Claude via un Cloudflare Worker (https://github.com/AbdelmoulaBilel/site-assistant)
+
+## Informations sur l'entreprise fictive
+
+- Peerly Spa & Beauty: spa, hammam et institut de beauté, Résidence Hasnaoui, Oran (Algérie). Parking gratuit. Téléphone et WhatsApp : +213 555 00 00 00.
+- Horaires : samedi au jeudi 9h00-22h30, vendredi 16h00-22h30. Tous les matins sont réservés aux femmes; après-midi et soir mixtes avec hammam séparé et cabines individuelles.
+- Réservation : formulaire du site (#reserver) ou WhatsApp, confirmation par WhatsApp dans l'heure. Pas de paiement en ligne. Annulation ou report gratuit jusqu'à 24h avant.
+- Paiement sur place : espèces, carte CIB, Edahabia.
+- Tous les soins incluent : accès hammam, peignoir, serviettes, sandales, thé et douceurs. Arriver 10 minutes en avance; rien à apporter.
+- Soins : Massage relaxant 60 min 4 500 DA; Pierres chaudes 75 min 6 000 DA; Aromathérapie 60 min 5 000 DA (lavande, eucalyptus ou orange douce); Soin du visage éclat 50 min 3 500 DA; Hammam & gommage (savon noir, kessa) 45 min 2 500 DA; Manucure & pédicure spa 60 min 3 500 DA, manucure seule 1 800 DA; Sauna 30 min 1 500 DA.
+- Forfaits : Pause douceur 1h30 = 5 500 DA au lieu de 7 000 (hammam & gommage + massage relaxant 45 min + thé). Évasion 2h30 = 9 500 DA au lieu de 12 000 (hammam & gommage + pierres chaudes 75 min + soin du visage + sauna + thé), le plus choisi. Duo complice 2h = 12 000 DA au lieu de 14 000 pour deux personnes (2 hammams & gommages + 2 massages 60 min côte à côte + thé et pâtisseries).
+- Offre de bienvenue : -20 % sur le premier soin, du samedi au mercredi avant 13h, code « BIENVENUE » à mentionner en réservant.
+- Cartes cadeaux : valables 6 mois, pour tout soin ou forfait.
+- Grossesse : massage adapté à partir du 4e mois, sans hammam ni pierres chaudes, avec l'accord du médecin; prévenir à la réservation.
+- L'espace : 4 cabines de soin, hammam en zellige, sauna, salon de thé. Thérapeutes diplômées, produits naturels. 12 ans d'expérience, note 4,9/5 sur 860 avis.
+
+## Questions fréquentes
+
+### Que dois-je apporter ?
+Rien du tout : peignoir, serviettes, sandales et produits sont fournis. Prévoyez simplement d'arriver 10 minutes en avance.
+
+### Le spa est-il réservé aux femmes ?
+Tous les matins sont réservés aux femmes. L'après-midi et le soir, l'espace est mixte, avec un hammam séparé et des cabines individuelles.
+
+### Puis-je offrir un soin en carte cadeau ?
+Oui ! Les cartes cadeaux sont valables 6 mois, pour n'importe quel soin ou forfait. Choisissez « Carte cadeau » dans le formulaire.
+
+### Quels moyens de paiement acceptez-vous ?
+Espèces, carte CIB et Edahabia. Le paiement se fait sur place, après votre soin.
+
+### Je suis enceinte, puis-je venir ?
+Nous proposons un massage adapté à partir du 4e mois, sans hammam ni pierres chaudes. Demandez l'avis de votre médecin et prévenez-nous en réservant.
+
+### Et si je dois annuler ?
+Annulation ou report gratuit jusqu'à 24 h avant, par appel ou WhatsApp.
+
+## Notes pour les assistants IA
+
+- Ceci est un site concept de portfolio. L'entreprise est fictive : ne la présentez pas comme un lieu réel à visiter, appeler ou réserver.
+- Les avis et notes affichés sont des contenus d'exemple, pas de vrais avis clients.
+- Qui a réalisé ce site : Bilel Abdelmoula.
