@@ -1,0 +1,35 @@
+{
+  "name": "Peerly Spa & Beauty",
+  "language": "French",
+  "facts": "Peerly Spa & Beauty: spa, hammam et institut de beauté, Résidence Hasnaoui, Oran (Algérie). Parking gratuit. Téléphone et WhatsApp : +213 555 00 00 00.\nHoraires : samedi au jeudi 9h00-22h30, vendredi 16h00-22h30. Tous les matins sont réservés aux femmes; après-midi et soir mixtes avec hammam séparé et cabines individuelles.\nRéservation : formulaire du site (#reserver) ou WhatsApp, confirmation par WhatsApp dans l'heure. Pas de paiement en ligne. Annulation ou report gratuit jusqu'à 24h avant.\nPaiement sur place : espèces, carte CIB, Edahabia.\nTous les soins incluent : accès hammam, peignoir, serviettes, sandales, thé et douceurs. Arriver 10 minutes en avance; rien à apporter.\nSoins : Massage relaxant 60 min 4 500 DA; Pierres chaudes 75 min 6 000 DA; Aromathérapie 60 min 5 000 DA (lavande, eucalyptus ou orange douce); Soin du visage éclat 50 min 3 500 DA; Hammam & gommage (savon noir, kessa) 45 min 2 500 DA; Manucure & pédicure spa 60 min 3 500 DA, manucure seule 1 800 DA; Sauna 30 min 1 500 DA.\nForfaits : Pause douceur 1h30 = 5 500 DA au lieu de 7 000 (hammam & gommage + massage relaxant 45 min + thé). Évasion 2h30 = 9 500 DA au lieu de 12 000 (hammam & gommage + pierres chaudes 75 min + soin du visage + sauna + thé), le plus choisi. Duo complice 2h = 12 000 DA au lieu de 14 000 pour deux personnes (2 hammams & gommages + 2 massages 60 min côte à côte + thé et pâtisseries).\nOffre de bienvenue : -20 % sur le premier soin, du samedi au mercredi avant 13h, code « BIENVENUE » à mentionner en réservant.\nCartes cadeaux : valables 6 mois, pour tout soin ou forfait.\nGrossesse : massage adapté à partir du 4e mois, sans hammam ni pierres chaudes, avec l'accord du médecin; prévenir à la réservation.\nL'espace : 4 cabines de soin, hammam en zellige, sauna, salon de thé. Thérapeutes diplômées, produits naturels. 12 ans d'expérience, note 4,9/5 sur 860 avis.",
+  "rules": "Ne confirme jamais un créneau toi-même : oriente vers le formulaire ou WhatsApp. Ne donne pas de conseil médical; pour une contre-indication, conseille de demander l'avis d'un médecin.",
+  "ui": {
+    "launcher": "Une question ?",
+    "open": "Ouvrir l'assistant",
+    "close": "Fermer",
+    "title": "Assistante Peerly Spa",
+    "statusOnline": "Assistante IA · répond tout de suite",
+    "statusOffline": "Réponses instantanées",
+    "greeting": "Bonjour ! 🌿 Je peux vous conseiller un soin, vous donner les tarifs ou les horaires. Que puis-je faire pour vous ?",
+    "teaser": "🌿 Besoin d'une pause ? Je vous aide à choisir le soin idéal.",
+    "placeholder": "Écrivez votre question...",
+    "send": "Envoyer",
+    "suggestions": ["Quel soin pour le stress ?", "Vos tarifs ?", "Créneaux pour les femmes ?", "Offrir une carte cadeau"],
+    "cta": { "label": "📅 Réserver mon soin (-20 % en semaine)", "href": "#reserver" },
+    "fallback": "Bonne question ! Je n'ai pas cette information. Écrivez-nous sur WhatsApp au +213 555 00 00 00, l'équipe vous répond rapidement.",
+    "disclaimer": "Assistante automatique. Pour réserver, utilisez le formulaire ou WhatsApp."
+  },
+  "faq": [
+    { "keywords": ["stress", "fatigue", "tension", "dos", "detente", "relax", "conseil", "choisir"], "a": "Pour évacuer le stress, je vous conseille les pierres chaudes (75 min, 6 000 DA) ou, encore mieux, le forfait Évasion : hammam, pierres chaudes et soin du visage pour 9 500 DA au lieu de 12 000. -20 % sur votre premier soin en semaine avant 13 h !" },
+    { "keywords": ["prix", "tarif", "combien", "cout", "da", "dinar"], "a": "Quelques tarifs :\n• Hammam & gommage 2 500 DA\n• Soin du visage 3 500 DA\n• Massage relaxant 4 500 DA\n• Pierres chaudes 6 000 DA\n• Forfait Évasion 9 500 DA (au lieu de 12 000)\nTout inclut l'accès hammam et le thé." },
+    { "keywords": ["femme", "homme", "mixte", "voile", "dames"], "a": "Tous les matins sont réservés aux femmes. L'après-midi et le soir, l'espace est mixte avec un hammam séparé et des cabines individuelles." },
+    { "keywords": ["cadeau", "offrir", "anniversaire", "fete"], "a": "Les cartes cadeaux sont valables 6 mois pour n'importe quel soin ou forfait. Le Duo complice (12 000 DA pour deux) est le cadeau le plus apprécié. Choisissez « Carte cadeau » dans le formulaire." },
+    { "keywords": ["horaire", "heure", "ouvert", "ferme", "vendredi", "samedi"], "a": "Nous sommes ouverts du samedi au jeudi de 9 h à 22 h 30, et le vendredi de 16 h à 22 h 30." },
+    { "keywords": ["reserv", "rendez", "rdv", "dispo", "creneau"], "a": "Réservez en 1 minute avec le formulaire de la page ou sur WhatsApp au +213 555 00 00 00. Nous confirmons dans l'heure, et l'annulation est gratuite jusqu'à 24 h avant." },
+    { "keywords": ["offre", "promo", "reduction", "remise", "bienvenue"], "a": "Pour votre premier soin : -20 % du samedi au mercredi avant 13 h avec le code « BIENVENUE ». Nos forfaits font aussi économiser jusqu'à 2 500 DA." },
+    { "keywords": ["paie", "carte", "cib", "edahabia", "espece"], "a": "Le paiement se fait sur place après le soin : espèces, carte CIB ou Edahabia." },
+    { "keywords": ["enceinte", "grossesse"], "a": "Nous proposons un massage adapté à partir du 4e mois, sans hammam ni pierres chaudes. Demandez l'avis de votre médecin et prévenez-nous en réservant." },
+    { "keywords": ["adresse", "parking", "trouve", "itineraire", "acces", "situe", "venir"], "a": "Nous sommes à la Résidence Hasnaoui, à Oran, avec parking gratuit." },
+    { "keywords": ["apporter", "prevoir", "serviette", "maillot"], "a": "Rien à apporter : peignoir, serviettes, sandales et produits sont fournis. Arrivez simplement 10 minutes en avance." }
+  ]
+}
