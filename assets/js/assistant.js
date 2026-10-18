@@ -16,6 +16,12 @@
 
   const normalize = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
+  // Styles live next to the script (assets/css/assistant.css); loading them here keeps them off the critical path.
+  const css = document.createElement("link");
+  css.rel = "stylesheet";
+  css.href = new URL("../css/assistant.css", script.src).href;
+  document.head.append(css);
+
   fetch(script.dataset.knowledge).then((r) => r.json()).then(init).catch(() => {});
 
   function init(kb) {
@@ -34,13 +40,16 @@
     // Launcher + teaser
     const launcher = el("button", "ai-launcher");
     launcher.type = "button";
-    launcher.setAttribute("aria-label", ui.open);
+    launcher.setAttribute("aria-label", ui.launcher); // same as the visible label
+    launcher.setAttribute("aria-expanded", "false");
+    launcher.setAttribute("aria-controls", "ai-panel");
     launcher.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c5 0 9 3.6 9 8s-4 8-9 8c-1 0-2-.1-2.9-.4L4 20l1.3-3.9C3.9 14.8 3 13 3 11c0-4.4 4-8 9-8Z" fill="currentColor"/><circle cx="8.5" cy="11" r="1.2" fill="var(--ai-bubble-dot)"/><circle cx="12" cy="11" r="1.2" fill="var(--ai-bubble-dot)"/><circle cx="15.5" cy="11" r="1.2" fill="var(--ai-bubble-dot)"/></svg><span class="ai-launcher-label">${ui.launcher}</span>`;
     const teaser = el("button", "ai-teaser", ui.teaser);
     teaser.type = "button";
 
     // Panel
     const panel = el("section", "ai-panel");
+    panel.id = "ai-panel";
     panel.setAttribute("role", "dialog");
     panel.setAttribute("aria-label", ui.title);
     panel.hidden = true;
@@ -126,7 +135,7 @@
 
     // Show the teaser once per session after a short delay
     teaser.hidden = true;
-    if (!state.seen) setTimeout(() => { if (panel.hidden) teaser.hidden = false; }, 9000);
+    if (!state.seen) setTimeout(() => { if (panel.hidden) teaser.hidden = false; }, 12000);
 
     // Keyword hit: phrases match anywhere, short words (<= 3 letters) match whole words,
     // longer ones match word starts ("reserv" hits "reservation").

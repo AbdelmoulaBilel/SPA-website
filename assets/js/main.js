@@ -5,16 +5,18 @@
 
   // Mobile navigation
   const toggle = document.querySelector(".menu-toggle");
-  toggle?.addEventListener("click", () => {
-    const open = root.classList.toggle("nav-open");
-    toggle.setAttribute("aria-expanded", open);
+  const setNav = (open) => {
+    root.classList.toggle("nav-open", open);
+    toggle?.setAttribute("aria-expanded", open);
+  };
+  toggle?.addEventListener("click", () => setNav(!root.classList.contains("nav-open")));
+  document.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => setNav(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && root.classList.contains("nav-open")) { setNav(false); toggle.focus(); }
   });
-  document.querySelectorAll(".nav-links a").forEach((a) =>
-    a.addEventListener("click", () => {
-      root.classList.remove("nav-open");
-      toggle?.setAttribute("aria-expanded", "false");
-    })
-  );
+  document.addEventListener("click", (e) => {
+    if (root.classList.contains("nav-open") && !e.target.closest(".nav")) setNav(false);
+  });
 
   // Reveal sections as they scroll into view
   const io = "IntersectionObserver" in window
@@ -24,29 +26,42 @@
     : null;
   document.querySelectorAll(".reveal").forEach((el) => (io ? io.observe(el) : el.classList.add("visible")));
 
-  // Tabs (menu categories, price lists)
+  // Tabs (menu categories): click or arrow keys, one tab in the Tab order
   document.querySelectorAll("[data-tabs]").forEach((tabs) => {
-    const buttons = tabs.querySelectorAll("[role=tab]");
-    buttons.forEach((btn) => btn.addEventListener("click", () => {
-      buttons.forEach((b) => {
-        const on = b === btn;
-        b.setAttribute("aria-selected", on);
-        document.getElementById(b.getAttribute("aria-controls")).hidden = !on;
+    const buttons = [...tabs.querySelectorAll("[role=tab]")];
+    const select = (btn) => buttons.forEach((b) => {
+      const on = b === btn;
+      b.setAttribute("aria-selected", on);
+      b.tabIndex = on ? 0 : -1;
+      document.getElementById(b.getAttribute("aria-controls")).hidden = !on;
+    });
+    buttons.forEach((btn, i) => {
+      btn.tabIndex = btn.getAttribute("aria-selected") === "true" ? 0 : -1;
+      btn.addEventListener("click", () => select(btn));
+      btn.addEventListener("keydown", (e) => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (!step) return;
+        const next = buttons[(i + step + buttons.length) % buttons.length];
+        select(next);
+        next.focus();
       });
-    }));
+    });
   });
 
-  // "Book this" buttons pre-select the service in the booking form
+  // "Book this" buttons pre-fill the booking form (a select option or a radio)
   const form = document.querySelector("form[data-booking]");
   document.querySelectorAll("[data-book]").forEach((btn) =>
     btn.addEventListener("click", () => {
-      const select = form?.querySelector("[name=service]");
-      if (select) select.value = btn.dataset.book;
+      const value = btn.dataset.book;
+      const select = form?.querySelector("select[name=service]");
+      if (select && [...select.options].some((o) => o.value === value)) select.value = value;
+      form?.querySelectorAll("input[type=radio]").forEach((r) => { if (r.value === value) r.checked = true; });
     })
   );
 
-  // Dates: no past days
-  const today = new Date().toISOString().slice(0, 10);
+  // Dates: no past days (local time, not UTC)
+  const now = new Date();
+  const today = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
   document.querySelectorAll("input[type=date]").forEach((d) => (d.min = today));
 
   // Booking form: validate, show confirmation, offer WhatsApp confirmation

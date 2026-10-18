@@ -19,6 +19,7 @@ h3 { font-size: 1.3rem; }
 p { margin: 0 0 1em; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 [hidden] { display: none !important; }
+fieldset { min-width: 0; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 100; background: var(--accent); color: var(--on-accent); padding: .6rem 1rem; border-radius: 8px; }
 .skip-link:focus { top: 1rem; }
@@ -145,9 +146,10 @@ form.sent .form-success { display: block; animation: pop .4s ease; }
 .site-footer a { text-decoration: none; opacity: .85; }
 .site-footer a:hover { opacity: 1; }
 .footer-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
-.footer-grid h4 { font-family: var(--font-body); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; opacity: .7; margin-bottom: 1rem; }
+.footer-title { font-family: var(--font-body); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--footer-fg) 80%, var(--footer-bg)); margin-bottom: 1rem; }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
-.footer-bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; opacity: .75; font-size: .85rem; }
+.footer-bottom { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; font-size: .85rem; color: color-mix(in srgb, var(--footer-fg) 82%, var(--footer-bg)); }
+.footer-bottom a { text-decoration: underline; text-underline-offset: 3px; opacity: 1; }
 @media (min-width: 921px) { .site-footer { padding-bottom: 4rem; } }
 
 /* Mobile sticky action bar */
@@ -156,12 +158,16 @@ form.sent .form-success { display: block; animation: pop .4s ease; }
 @media (max-width: 920px) { .mobile-bar { display: flex; } }
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-.demo-note { font-size: .8rem; opacity: .7; }
+.demo-note { font-size: .8rem; }
+.form-success .demo-note { color: var(--muted); }
+a[href^="tel:"] { white-space: nowrap; }
+.btn--wa { --btn-bg: #11793f; --btn-fg: #fff; }
+.btn--wa:hover { box-shadow: 0 10px 24px -10px #11793f; }

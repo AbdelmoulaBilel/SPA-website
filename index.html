@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
@@ -6,16 +6,19 @@
   <title>Peerly Spa &amp; Beauty | Spa, hammam et massages à Oran</title>
   <meta name="description" content="Massages, hammam, pierres chaudes et soins du visage à Oran. Réservez en ligne en 1 minute : -20 % sur votre premier soin en semaine.">
   <meta name="theme-color" content="#f8f4ee">
+  <link rel="canonical" href="https://abdelmoulabilel.github.io/SPA-website/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdelmoulabilel.github.io/SPA-website/">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:title" content="Peerly Spa & Beauty, Oran">
   <meta property="og:description" content="Massages, hammam et soins du visage. -20 % sur votre premier soin.">
-  <meta property="og:image" content="assets/img/hero.webp">
+  <meta property="og:image" content="https://abdelmoulabilel.github.io/SPA-website/docs/preview.jpg">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-0.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-1.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="stylesheet" href="assets/css/assistant.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"DaySpa","name":"Peerly Spa & Beauty","telephone":"+213-555-00-00-00","address":{"@type":"PostalAddress","streetAddress":"Résidence Hasnaoui","addressLocality":"Oran","addressCountry":"DZ"},"priceRange":"1500-12000 DA"}
   </script>
@@ -34,9 +37,9 @@
       <li><a href="#reserver">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:+213555000000">+213 555 00 00 00</a>
+      <a class="nav-phone" href="tel:+213555000000">+213&nbsp;555&nbsp;00&nbsp;00&nbsp;00</a>
       <a class="btn btn--sm" href="#reserver">Réserver</a>
-      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      <button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
     </div>
   </nav>
 </header>
@@ -58,7 +61,7 @@
         </div>
       </div>
       <div class="hero-media reveal">
-        <img src="assets/img/hero-960.webp" srcset="assets/img/hero-960.webp 960w, assets/img/hero.webp 1920w" sizes="(max-width: 920px) 100vw, 50vw" alt="Baignoire de spa au calme, lumière naturelle" fetchpriority="high" width="960" height="640">
+        <img src="assets/img/hero-960.webp" srcset="assets/img/hero-640.webp 640w, assets/img/hero-960.webp 960w, assets/img/hero.webp 1920w" sizes="(max-width: 920px) 100vw, 50vw" alt="Baignoire de spa au calme, lumière naturelle" fetchpriority="high" width="960" height="640">
         <div class="hero-badge"><strong>12 ans</strong><span>de soins à Oran et plus de 15 000 clientes chouchoutées</span></div>
       </div>
     </div>
@@ -211,17 +214,17 @@
       </div>
       <div class="grid grid-3">
         <article class="review reveal">
-          <span class="stars" aria-label="5 étoiles">★★★★★</span>
+          <span class="stars" role="img" aria-label="5 étoiles">★★★★★</span>
           <blockquote>« Le forfait Évasion est un vrai voyage. Les pierres chaudes ont enfin dénoué mes épaules après des semaines de stress. »</blockquote>
           <footer><span class="avatar">SB</span>Sarah B. · Forfait Évasion</footer>
         </article>
         <article class="review reveal">
-          <span class="stars" aria-label="5 étoiles">★★★★★</span>
+          <span class="stars" role="img" aria-label="5 étoiles">★★★★★</span>
           <blockquote>« Réservé en 1 minute sur WhatsApp, accueil adorable, et le hammam est d'une propreté impeccable. J'y retourne le mois prochain. »</blockquote>
           <footer><span class="avatar">IK</span>Imane K. · Hammam &amp; gommage</footer>
         </article>
         <article class="review reveal">
-          <span class="stars" aria-label="5 étoiles">★★★★★</span>
+          <span class="stars" role="img" aria-label="5 étoiles">★★★★★</span>
           <blockquote>« J'ai offert le Duo à ma mère pour son anniversaire. Elle n'arrête pas d'en parler. Merci à toute l'équipe ! »</blockquote>
           <footer><span class="avatar">NM</span>Nour M. · Duo complice</footer>
         </article>
@@ -237,19 +240,21 @@
         <p class="lead">Choisissez votre soin et votre créneau : nous vous confirmons par WhatsApp dans l'heure.</p>
         <ul class="contact-list">
           <li><span class="ico" aria-hidden="true">📍</span><div><strong>Résidence Hasnaoui, Oran</strong><br><a href="https://maps.google.com/?q=Oran" target="_blank" rel="noopener">Voir l'itinéraire</a> · Parking gratuit</div></li>
-          <li><span class="ico" aria-hidden="true">📞</span><div><strong><a href="tel:+213555000000">+213 555 00 00 00</a></strong><br>Appel ou WhatsApp</div></li>
+          <li><span class="ico" aria-hidden="true">📞</span><div><strong><a href="tel:+213555000000">+213&nbsp;555&nbsp;00&nbsp;00&nbsp;00</a></strong><br>Appel ou WhatsApp</div></li>
         </ul>
         <table class="hours">
+          <tbody>
           <tr><td>Samedi au jeudi</td><td>9 h 00 à 22 h 30</td></tr>
           <tr><td>Vendredi</td><td>16 h 00 à 22 h 30</td></tr>
           <tr><td>Créneaux femmes</td><td>tous les matins</td></tr>
+        </tbody>
         </table>
       </div>
       <div class="booking-card reveal">
         <form class="form" data-booking novalidate>
           <div class="form-fields form">
             <div class="form-row">
-              <div class="field"><label for="b-name">Prénom et nom</label><input id="b-name" name="name" data-label="Nom" autocomplete="name" required data-error="Indiquez votre nom"><span class="error"></span></div>
+              <div class="field"><label for="b-name">Prénom et nom</label><input type="text" id="b-name" name="name" data-label="Nom" autocomplete="name" required data-error="Indiquez votre nom"><span class="error"></span></div>
               <div class="field"><label for="b-phone">Téléphone / WhatsApp</label><input id="b-phone" name="phone" data-label="Téléphone" type="tel" autocomplete="tel" required pattern="[0-9 +]{9,}" data-error="Pour vous confirmer le rendez-vous"><span class="error"></span></div>
             </div>
             <div class="field"><label for="b-service">Soin souhaité</label>
@@ -298,9 +303,9 @@
   <div class="container">
     <div class="footer-grid">
       <div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">P</span>Peerly Spa</a><p style="margin-top:1rem;opacity:.75">Spa, hammam et institut de beauté à Oran.</p></div>
-      <div><h4>Contact</h4><ul><li>Résidence Hasnaoui, Oran</li><li><a href="tel:+213555000000">+213 555 00 00 00</a></li><li><a href="https://wa.me/213555000000" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
-      <div><h4>Horaires</h4><ul><li>Sam. au jeu. 9 h à 22 h 30</li><li>Vendredi 16 h à 22 h 30</li></ul></div>
-      <div><h4>Découvrir</h4><ul><li><a href="#soins">Soins</a></li><li><a href="#forfaits">Forfaits</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h2 class="footer-title">Contact</h2><ul><li>Résidence Hasnaoui, Oran</li><li><a href="tel:+213555000000">+213&nbsp;555&nbsp;00&nbsp;00&nbsp;00</a></li><li><a href="https://wa.me/213555000000" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+      <div><h2 class="footer-title">Horaires</h2><ul><li>Sam. au jeu. 9 h à 22 h 30</li><li>Vendredi 16 h à 22 h 30</li></ul></div>
+      <div><h2 class="footer-title">Découvrir</h2><ul><li><a href="#soins">Soins</a></li><li><a href="#forfaits">Forfaits</a></li><li><a href="#faq">FAQ</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>© <span data-year></span> Peerly Spa &amp; Beauty</span>
